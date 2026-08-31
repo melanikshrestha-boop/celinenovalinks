@@ -1,9 +1,7 @@
-# linkree cloner
+# my linkree
 
-Self-hosted Instagram bio page. Based on [LittleLink](https://github.com/sethcottle/littlelink).
+Instagram bio page for Celine Nova. Hosted on GitHub Pages — not LittleLink.
 
-Live: https://melanikshrestha-boop.github.io/linkree-cloner/
+Live: https://melanikshrestha-boop.github.io/my-linkree/
 
-Edit `index.html` to add, remove, or reorder buttons. Drop a square photo on `images/avatar.png` (and `images/avatar@2x.png`) to replace the placeholder.
-
-Instagram bio URL: that GitHub Pages link.
+CELINE NOVA. and the photo go to [melanilaurents.com](https://melanilaurents.com). Socials are icons only. The contribution graph is live from GitHub.
