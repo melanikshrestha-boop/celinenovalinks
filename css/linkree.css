@@ -225,7 +225,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  gap: 0.45rem;
+  gap: 0.18rem;
   width: 100%;
 }
 
