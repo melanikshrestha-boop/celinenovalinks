@@ -1,1 +1,9 @@
-{ "cleanUrls": true }
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://melanilaurents.com/",
+      "permanent": true
+    }
+  ]
+}

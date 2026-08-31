@@ -1,5 +1,5 @@
 # my linkree
 
-Instagram bio page. Photo backdrop, Celine Nova HUD, icon-only socials.
+Instagram bio URL. Goes to the real site — [melanilaurents.com](https://melanilaurents.com/).
 
-Live: https://my-linkree.vercel.app/
+https://my-linkree.vercel.app/
