@@ -25,7 +25,8 @@ body {
 .poster {
   position: relative;
   isolation: isolate;
-  min-height: 100dvh;
+  height: 100svh;
+  min-height: 100svh;
   overflow: hidden;
 }
 
@@ -48,12 +49,20 @@ body {
 }
 
 .bg img:first-child {
-  object-position: 50% 42%;
+  /* Fendi / BMW — keep the car in frame on wide screens */
+  object-position: 50% 82%;
 }
 
 .bg img:last-child {
+  /* Spring St — same crop as the Celine home still */
   object-position: 50% 54%;
   animation: still-cycle 14s ease-in-out infinite;
+}
+
+@media (max-width: 720px) {
+  .bg img:first-child {
+    object-position: 50% 52%;
+  }
 }
 
 @keyframes still-cycle {
