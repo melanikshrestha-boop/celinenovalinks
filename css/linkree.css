@@ -106,17 +106,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: min(22.5rem, calc(100% - 2rem));
+  width: min(18rem, calc(100% - 2.75rem));
   margin: 0 auto;
-  padding: 2.25rem 0 3rem;
+  padding: 2.5rem 0 3rem;
 }
 
 .head {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.85rem;
-  margin: 0 0 1.15rem;
+  gap: 0.95rem;
+  margin: 0 0 1.7rem;
 }
 
 .identity {
@@ -174,26 +174,26 @@ body {
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  width: 100%;
+  gap: 0.95rem;
+  width: min(15.5rem, 100%);
 }
 
 .buttons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.48rem;
+  gap: 0.42rem;
   width: 100%;
-  min-height: 2.75rem;
-  padding: 0 1rem;
-  border-radius: 4px;
+  min-height: 2.3rem;
+  padding: 0.62rem 0.95rem;
+  border-radius: 8px;
   background: var(--paper);
   color: var(--ink);
   text-decoration: none;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   line-height: 1;
 }
 
