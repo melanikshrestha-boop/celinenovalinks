@@ -1,5 +1,5 @@
 # my linkree
 
-Instagram bio URL. Goes to the real site — [melanilaurents.com](https://melanilaurents.com/).
+Poster for Instagram. Fendi still + Spring Street fade. Named buttons.
 
 https://my-linkree.vercel.app/
