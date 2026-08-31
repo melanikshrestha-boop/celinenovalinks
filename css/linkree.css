@@ -4,11 +4,6 @@
   --ink: #ffffff;
   --muted: rgba(232, 230, 227, 0.72);
   --gold: #f0cf78;
-  --cell-0: rgba(255, 255, 255, 0.1);
-  --cell-1: #0e4429;
-  --cell-2: #006d32;
-  --cell-3: #26a641;
-  --cell-4: #39d353;
 }
 
 *,
@@ -131,7 +126,6 @@ body {
   width: 21px;
   height: 21px;
   color: var(--muted);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
 }
 
 .socials a:hover,
@@ -145,33 +139,21 @@ body {
   height: 100%;
 }
 
-.center {
+.mark {
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 5;
+  margin: 0;
   transform: translate(-50%, -50%);
-  width: min(92vw, 42rem);
-}
-
-.graph {
-  width: 100%;
-}
-
-.graph svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
-  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
-}
-
-.graph text {
-  fill: rgba(255, 255, 255, 0.82);
-  font-family: "Share Tech Mono", ui-monospace, monospace;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.022em;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 4px 18px rgba(0, 0, 0, 0.3);
 }
 
 .nav {
@@ -222,6 +204,10 @@ body {
   .socials a {
     width: 18px;
     height: 18px;
+  }
+
+  .mark {
+    font-size: 28px;
   }
 
   .nav {
