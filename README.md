@@ -1,5 +1,5 @@
-# my linkree
+# celinenovalinks
 
 Poster for Instagram. Fendi still + Spring Street fade. Named buttons.
 
-https://my-linkree.vercel.app/
+https://celinenovalinks.vercel.app/
