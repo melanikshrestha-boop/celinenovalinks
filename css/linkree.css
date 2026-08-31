@@ -220,6 +220,23 @@ body {
   background: #fff;
 }
 
+/* GitHub + LinkedIn share one row — two boxes, same total width as the others. */
+.buttons-split {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.45rem;
+  width: 100%;
+}
+
+.buttons-split a {
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
+  padding-left: 0.45rem;
+  padding-right: 0.45rem;
+}
+
 .share-btn {
   position: absolute;
   top: max(0.85rem, env(safe-area-inset-top, 0px));
