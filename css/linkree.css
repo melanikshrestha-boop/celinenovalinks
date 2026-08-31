@@ -4,7 +4,7 @@
   --ink: #ffffff;
   --muted: rgba(232, 230, 227, 0.72);
   --gold: #f0cf78;
-  --cell-0: rgba(255, 255, 255, 0.16);
+  --cell-0: rgba(255, 255, 255, 0.1);
   --cell-1: #0e4429;
   --cell-2: #006d32;
   --cell-3: #26a641;
@@ -163,10 +163,11 @@ body {
   width: 100%;
   height: auto;
   overflow: visible;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
 }
 
 .graph text {
-  fill: rgba(255, 255, 255, 0.78);
+  fill: rgba(255, 255, 255, 0.82);
   font-family: "Share Tech Mono", ui-monospace, monospace;
   font-size: 9px;
   letter-spacing: 0.08em;

@@ -44,7 +44,8 @@ function monthLabels(weeks) {
     const first = week.find((d) => d);
     if (!first) return;
     const month = new Date(`${first.date}T12:00:00`).getUTCMonth();
-    if (month !== last) {
+    const prev = labels[labels.length - 1];
+    if (month !== last && (!prev || i - prev.i >= 3)) {
       labels.push({ i, name: names[month] });
       last = month;
     }
