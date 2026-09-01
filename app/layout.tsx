@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://celinenovalinks.vercel.app/" },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=eren1", sizes: "any" },
-      { url: "/assets/eren.png?v=eren1", type: "image/png" },
+      { url: "/favicon.ico?v=eren2", sizes: "any" },
+      { url: "/assets/eren.png?v=eren2", type: "image/png" },
     ],
-    apple: "/assets/eren.png?v=eren1",
+    apple: "/assets/eren.png?v=eren2",
   },
 };
 
