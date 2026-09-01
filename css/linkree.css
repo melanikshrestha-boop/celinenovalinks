@@ -252,6 +252,7 @@ body {
 }
 
 .buttons {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -315,6 +316,46 @@ body {
 .buttons-split a {
   flex: 0 0 auto;
   width: 100%;
+}
+
+.buttons[data-tuned] {
+  width: var(--tune-w);
+  max-width: calc(100% - 2 * var(--inset));
+}
+
+.buttons[data-tuned] a {
+  height: var(--tune-h);
+  min-height: var(--tune-h);
+  box-sizing: border-box;
+}
+
+.button-tune {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  z-index: 4;
+  margin: 0;
+  transform: translateX(-50%);
+}
+
+.button-tune input {
+  width: 7.5rem;
+  margin: 0;
+  padding: 0.35rem 0.5rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--type-label);
+  font-weight: var(--weight-body);
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.button-tune input:focus {
+  outline: 1px solid #fff;
 }
 
 /* latest youtube card — em off .sheet */

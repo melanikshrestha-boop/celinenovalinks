@@ -1,3 +1,4 @@
+import { ButtonTune } from "@/components/ButtonTune";
 import { YoutubeLatest } from "@/components/YoutubeLatest";
 
 export default function HomePage() {
@@ -48,6 +49,7 @@ export default function HomePage() {
             </nav>
           </div>
         </header>
+        <ButtonTune />
         <nav className="buttons" aria-label="Links">
           <div className="buttons-split">
             <a href="https://github.com/melanikshrestha-boop" target="_blank" rel="noopener noreferrer">
