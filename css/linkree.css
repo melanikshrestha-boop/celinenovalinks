@@ -2,6 +2,20 @@
   --paper: #f5f2eb;
   --field: #d4cbb8;
   --ink: #141210;
+  --font: Syne, system-ui, sans-serif;
+  --type-header: 20px;
+  --type-label: 14px;
+  --type-button: 18px;
+  --weight-header: 600;
+  --weight-body: 500;
+  --track-label: 0.12em;
+  --space: 24px;
+  --space-tight: 12px;
+  --inset: 20px;
+  --icon: 28px;
+  --radius: 8px;
+  --pad-y: 12px;
+  --pad-x: 16px;
 }
 
 *,
@@ -118,24 +132,17 @@ body {
 }
 
 .sheet {
-  --space: 1rem;
-  --type-header: 1em;
-  --type-label: 0.6875em;
-  --type-button: 0.875em;
-  --track-label: 0.14em;
-  --icon: 1.35em;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space);
-  width: calc(100% - 2.5rem);
+  width: 100%;
   max-width: 22rem;
   margin-inline: auto;
-  font-size: 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 2em;
+  padding: 1.5rem var(--inset) 2rem;
+  font-family: var(--font);
   max-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -157,12 +164,10 @@ body {
   }
 
   .sheet {
-    width: calc(100% - 2.5rem);
+    width: 100%;
     max-width: none;
     margin-inline: auto;
-    padding-top: 1.5rem;
-    padding-bottom: 2em;
-    font-size: 1rem;
+    padding: 1.5rem var(--inset) 2rem;
   }
 }
 
@@ -179,13 +184,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-tight);
 }
 
 .identity {
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
+  gap: var(--space-tight);
   margin: 0;
   color: #fff;
   text-decoration: none;
@@ -200,10 +205,10 @@ body {
 }
 
 .identity span {
-  font-family: Syne, system-ui, sans-serif;
+  font-family: var(--font);
   font-size: var(--type-header);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: var(--weight-header);
+  letter-spacing: 0;
   line-height: 1;
   white-space: nowrap;
 }
@@ -211,9 +216,9 @@ body {
 .socials-label {
   margin: 0;
   color: #fff;
-  font-family: Syne, system-ui, sans-serif;
+  font-family: var(--font);
   font-size: var(--type-label);
-  font-weight: 500;
+  font-weight: var(--weight-body);
   letter-spacing: var(--track-label);
   line-height: 1;
   text-align: center;
@@ -223,7 +228,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75em;
+  gap: var(--space-tight);
 }
 
 .icons a {
@@ -249,7 +254,7 @@ body {
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: var(--space);
+  gap: var(--space-tight);
   width: 100%;
 }
 
@@ -257,17 +262,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
+  gap: var(--space-tight);
   width: 100%;
-  min-height: 2.5em;
-  padding: 0.7em 1em;
-  border-radius: 0.5em;
+  min-height: 0;
+  padding: var(--pad-y) var(--pad-x);
+  border-radius: var(--radius);
   background: var(--paper);
   color: var(--ink);
   text-decoration: none;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font);
   font-size: var(--type-button);
-  font-weight: 500;
+  font-weight: var(--weight-body);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -277,8 +282,8 @@ body {
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  width: 1.05em;
-  height: 1.05em;
+  width: 1em;
+  height: 1em;
 }
 
 .buttons .mark img,
@@ -300,7 +305,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  gap: var(--space);
+  gap: var(--inset);
   width: 100%;
 }
 
@@ -320,7 +325,7 @@ body {
   text-decoration: none;
   color: var(--ink);
   background: var(--paper);
-  border-radius: 0.5em;
+  border-radius: var(--radius);
 }
 
 .yt-latest:hover,
@@ -365,16 +370,16 @@ body {
   min-width: 0;
   flex-direction: column;
   justify-content: center;
-  gap: 0.28em;
-  padding: 0.55em 0.7em 0.55em 0.75em;
+  gap: var(--space-tight);
+  padding: var(--pad-y) var(--pad-x);
 }
 
 .yt-latest-label {
   color: rgba(20, 18, 16, 0.55);
-  font-family: Syne, system-ui, sans-serif;
-  font-size: 0.5625em;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-family: var(--font);
+  font-size: var(--type-label);
+  font-weight: var(--weight-body);
+  letter-spacing: var(--track-label);
   line-height: 1;
   text-transform: lowercase;
 }
@@ -384,19 +389,19 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.78em;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  font-family: var(--font);
+  font-size: var(--type-button);
+  font-weight: var(--weight-body);
+  letter-spacing: 0;
   line-height: 1.25;
 }
 
 .yt-latest-date {
   color: rgba(20, 18, 16, 0.5);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.62em;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: var(--font);
+  font-size: var(--type-label);
+  font-weight: var(--weight-body);
+  letter-spacing: 0;
   line-height: 1;
 }
 
