@@ -12,6 +12,7 @@
   --space: 24px;
   --space-tight: 12px;
   --inset: 20px;
+  --button-max: 20rem;
   --icon: 28px;
   --radius: 8px;
   --pad-y: 12px;
@@ -256,6 +257,7 @@ body {
   flex-direction: column;
   gap: var(--space-tight);
   width: 100%;
+  max-width: var(--button-max);
 }
 
 .buttons a {
@@ -305,7 +307,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  gap: var(--inset);
+  gap: var(--space-tight);
   width: 100%;
 }
 
