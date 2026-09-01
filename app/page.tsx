@@ -1,34 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Celine Nova</title>
-    <link rel="icon" href="/favicon.ico?v=eren1" sizes="any">
-    <link rel="icon" type="image/png" href="assets/eren.png?v=eren1">
-    <link rel="apple-touch-icon" href="assets/eren.png?v=eren1">
-    <link rel="canonical" href="https://celinenovalinks.vercel.app/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/linkree.css?v=fluid1">
-  </head>
-  <body>
-    <div class="poster">
-      <div class="bg" aria-hidden="true">
-        <img src="assets/fendi.jpg" alt="">
-        <img src="assets/spring.jpg" alt="">
+import { YoutubeLatest } from "@/components/YoutubeLatest";
+
+export default function HomePage() {
+  return (
+    <div className="poster">
+      <div className="bg" aria-hidden="true">
+        <img src="/assets/fendi.jpg" alt="" />
+        <img src="/assets/spring.jpg" alt="" />
       </div>
-      <div class="veil" aria-hidden="true"></div>
-      <div class="sheet">
-        <header class="head">
-          <a class="identity" href="https://melanilaurents.com/" aria-label="Celine Nova">
-            <img src="assets/eren.png" alt="" width="256" height="256">
+      <div className="veil" aria-hidden="true" />
+      <div className="sheet">
+        <header className="head">
+          <a className="identity" href="https://melanilaurents.com/" aria-label="Celine Nova">
+            <img src="/assets/eren.png" alt="" width={256} height={256} />
             <span>CELINE NOVA.</span>
           </a>
-          <div class="stack">
-            <p class="socials-label">socials</p>
-            <nav class="icons" aria-label="Social">
+          <div className="stack">
+            <p className="socials-label">socials</p>
+            <nav className="icons" aria-label="Social">
               <a href="https://www.youtube.com/@Celine_Nova" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
               </a>
@@ -43,9 +31,10 @@
               </a>
             </nav>
           </div>
-          <div class="stack">
-            <p class="socials-label">contact me</p>
-            <nav class="icons" aria-label="Contact">
+          <YoutubeLatest />
+          <div className="stack">
+            <p className="socials-label">contact me</p>
+            <nav className="icons" aria-label="Contact">
               <a href="mailto:mshresth@usc.edu" aria-label="Email">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 5.372v13.256c0 .65-.547 1.186-1.186 1.186h-3.511V11.54L12 16.36 4.697 11.54v8.274H1.186C.536 19.814 0 19.278 0 18.628V5.372c0-1.63 1.76-2.62 3.13-1.753L12 11.4l8.87-7.781C22.24 2.752 24 3.742 24 5.372z"/></svg>
               </a>
@@ -58,27 +47,27 @@
             </nav>
           </div>
         </header>
-        <nav class="buttons" aria-label="Links">
+        <nav className="buttons" aria-label="Links">
           <a href="https://melanilaurents.com/">
-            <span class="mark"><img src="assets/eren.png" alt=""></span>
+            <span className="mark"><img src="/assets/eren.png" alt="" /></span>
             Celine Nova.
           </a>
-          <div class="buttons-split">
+          <div className="buttons-split">
             <a href="https://github.com/melanikshrestha-boop" target="_blank" rel="noopener noreferrer">
-              <span class="mark" aria-hidden="true">
+              <span className="mark" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </span>
               GitHub
             </a>
             <a href="https://www.linkedin.com/in/melanilaurents/" target="_blank" rel="noopener noreferrer">
-              <span class="mark" aria-hidden="true">
+              <span className="mark" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </span>
               LinkedIn
             </a>
           </div>
           <a href="https://melanilaurents.com/projects">
-            <span class="mark" aria-hidden="true">
+            <span className="mark" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2 2.5 7.4v9.2L12 21.8l9.5-5.2V7.4L12 2.2zm0 2.3 6.7 3.7L12 12 5.3 8.2 12 4.5zM4.5 9.7l6.5 3.6v6.4L4.5 16.2V9.7zm8.5 10v-6.4l6.5-3.6v6.5L13 19.7z"/></svg>
             </span>
             Builds &amp; Designs
@@ -86,5 +75,5 @@
         </nav>
       </div>
     </div>
-  </body>
-</html>
+  );
+}

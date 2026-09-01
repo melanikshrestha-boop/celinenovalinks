@@ -262,3 +262,141 @@ body {
   padding-left: 0.45em;
   padding-right: 0.45em;
 }
+
+/* latest youtube card — em off .sheet; do not touch the clamp sizing rules above */
+.yt-latest {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--paper);
+  border-radius: 0.5em;
+}
+
+.yt-latest:hover,
+.yt-latest:focus-visible {
+  background: #fff;
+}
+
+.yt-latest-thumb {
+  position: relative;
+  flex: 0 0 38%;
+  width: 38%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #1a1814;
+}
+
+.yt-latest-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.yt-latest-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.38em 0 0.38em 0.64em;
+  border-color: transparent transparent transparent #fff;
+  opacity: 0.85;
+  transform: translate(-30%, -50%);
+  pointer-events: none;
+}
+
+.yt-latest-copy {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.28em;
+  padding: 0.55em 0.7em 0.55em 0.75em;
+}
+
+.yt-latest-label {
+  color: rgba(20, 18, 16, 0.55);
+  font-family: Syne, system-ui, sans-serif;
+  font-size: 0.5625em;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.yt-latest-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.78em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+.yt-latest-date {
+  color: rgba(20, 18, 16, 0.5);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.62em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.yt-shimmer {
+  background: linear-gradient(
+    90deg,
+    #ece7dc 0%,
+    #f7f4ee 45%,
+    #ece7dc 100%
+  );
+  background-size: 200% 100%;
+  animation: yt-shimmer 1.2s ease-in-out infinite;
+}
+
+.yt-skel-line {
+  display: block;
+  border-radius: 0.15em;
+  height: 0.55em;
+}
+
+.yt-skel-line--label {
+  width: 42%;
+  height: 0.45em;
+}
+
+.yt-skel-line--title {
+  width: 88%;
+  height: 0.7em;
+}
+
+.yt-skel-line--meta {
+  width: 28%;
+  height: 0.45em;
+}
+
+@keyframes yt-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yt-shimmer {
+    animation: none;
+  }
+}
+
