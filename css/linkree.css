@@ -245,12 +245,14 @@ body {
   justify-content: center;
   width: var(--icon);
   height: var(--icon);
-  color: rgba(255, 255, 255, 0.82);
+  color: #fff;
+  filter: drop-shadow(0 0 0.35rem rgba(0, 0, 0, 0.55));
 }
 
 .icons a:hover,
 .icons a:focus-visible {
   color: #fff;
+  filter: drop-shadow(0 0 0.45rem rgba(0, 0, 0, 0.7));
 }
 
 .icons svg {
