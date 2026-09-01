@@ -157,17 +157,17 @@ body {
     background: rgba(8, 6, 4, 0.22);
   }
 
-  /* Same phone column as mobile, sitting on the faded still. */
+  /* Match Linktree desktop card: 580px × (100svh - 2.5rem), 24px corners. */
   .stage {
-    width: 24.5rem;
-    height: min(52rem, calc(100svh - 2.5rem));
-    border-radius: 1.85rem;
+    width: 36.25rem;
+    height: calc(100svh - 2.5rem);
+    border-radius: 1.5rem;
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
   }
 
   .sheet {
     width: calc(100% - 2.5rem);
-    max-width: 22rem;
+    max-width: none;
     font-size: 1rem;
   }
 }
