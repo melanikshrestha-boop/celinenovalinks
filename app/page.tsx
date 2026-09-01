@@ -49,10 +49,6 @@ export default function HomePage() {
           </div>
         </header>
         <nav className="buttons" aria-label="Links">
-          <a href="https://melanilaurents.com/">
-            <span className="mark"><img src="/assets/eren.png" alt="" /></span>
-            Celine Nova.
-          </a>
           <div className="buttons-split">
             <a href="https://github.com/melanikshrestha-boop" target="_blank" rel="noopener noreferrer">
               <span className="mark" aria-hidden="true">

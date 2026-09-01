@@ -118,16 +118,23 @@ body {
 }
 
 .sheet {
+  --space: 1rem;
+  --type-header: 1em;
+  --type-label: 0.6875em;
+  --type-button: 0.875em;
+  --track-label: 0.14em;
+  --icon: 1.35em;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--space);
   width: calc(100% - 2.5rem);
   max-width: 22rem;
   margin-inline: auto;
   font-size: 1rem;
-  padding-top: clamp(2rem, 8vh, 6rem);
+  padding-top: 1.5rem;
   padding-bottom: 2em;
   max-height: 100%;
   overflow-x: hidden;
@@ -145,7 +152,7 @@ body {
     justify-content: flex-start;
     width: min(36.25rem, calc(100% - 2rem));
     height: 100svh;
-    border-radius: 1rem;
+    border-radius: 0;
     box-shadow: 0 0 48px rgba(20, 18, 16, 0.12);
   }
 
@@ -153,7 +160,7 @@ body {
     width: calc(100% - 2.5rem);
     max-width: none;
     margin-inline: auto;
-    padding-top: clamp(2rem, 8vh, 6rem);
+    padding-top: 1.5rem;
     padding-bottom: 2em;
     font-size: 1rem;
   }
@@ -164,39 +171,39 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 1em;
-  margin: 0 0 1.7em;
+  gap: var(--space);
+  margin: 0;
 }
 
 .stack {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.5rem;
 }
 
 .identity {
   display: inline-flex;
   align-items: center;
-  gap: 0.56em;
-  margin-bottom: 0.35em;
+  gap: 0.5em;
+  margin: 0;
   color: #fff;
   text-decoration: none;
 }
 
 .identity img {
   display: block;
-  width: 1.55em;
-  height: 1.55em;
+  width: var(--icon);
+  height: var(--icon);
   border-radius: 0;
   object-fit: cover;
 }
 
 .identity span {
   font-family: Syne, system-ui, sans-serif;
-  font-size: 0.8125em;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-size: var(--type-header);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   line-height: 1;
   white-space: nowrap;
 }
@@ -205,9 +212,9 @@ body {
   margin: 0;
   color: #fff;
   font-family: Syne, system-ui, sans-serif;
-  font-size: 0.6875em;
+  font-size: var(--type-label);
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: var(--track-label);
   line-height: 1;
   text-align: center;
 }
@@ -223,8 +230,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.4em;
-  height: 1.4em;
+  width: var(--icon);
+  height: var(--icon);
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -242,7 +249,7 @@ body {
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 0.95em;
+  gap: var(--space);
   width: 100%;
 }
 
@@ -250,17 +257,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.42em;
+  gap: 0.5em;
   width: 100%;
-  min-height: 2.3em;
-  padding: 0.62em 0.95em;
+  min-height: 2.5em;
+  padding: 0.7em 1em;
   border-radius: 0.5em;
   background: var(--paper);
   color: var(--ink);
   text-decoration: none;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: var(--type-button);
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   line-height: 1;
 }
 
@@ -292,7 +300,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  gap: 0.18em;
+  gap: var(--space);
   width: 100%;
 }
 
@@ -300,8 +308,6 @@ body {
   flex: 1 1 0;
   width: auto;
   min-width: 0;
-  padding-left: 0.45em;
-  padding-right: 0.45em;
 }
 
 /* latest youtube card — em off .sheet */
