@@ -141,7 +141,7 @@ body {
 
   /* Cream paper field (Linktree’s green). Photo lives only in the phone column. */
   .stage {
-    justify-content: center;
+    justify-content: flex-start;
     width: min(36.25rem, calc(100% - 2rem));
     height: 100svh;
     border-radius: 0;
@@ -152,8 +152,8 @@ body {
     width: calc(100% - 2.5rem);
     max-width: none;
     margin-inline: auto;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: clamp(2rem, 8vh, 6rem);
+    padding-bottom: 2em;
     font-size: 1rem;
   }
 }
