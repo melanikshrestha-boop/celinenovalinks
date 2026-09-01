@@ -104,13 +104,14 @@ body {
 }
 
 .sheet {
+  --sheet: clamp(20rem, 42vw, 60rem);
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: clamp(20rem, 32vw, 34rem);
-  font-size: clamp(1rem, 0.8rem + 0.5vw, 1.25rem);
+  width: var(--sheet);
+  font-size: calc(var(--sheet) / 20);
   padding-top: clamp(2rem, 8vh, 6rem);
   padding-bottom: 2em;
   max-height: 100svh;

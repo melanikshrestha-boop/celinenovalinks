@@ -8,6 +8,6 @@ Live: `https://celinenovalinks.vercel.app/`
 npx vercel alias set <deployment-url> celinenovalinks.vercel.app
 ```
 
-Column width is one rule: `.sheet { width: clamp(20rem, 32vw, 34rem); }`. No max-width, no min(), no `@media` width override. Inner type/icons/buttons/gaps are `em` off `.sheet` font-size. Horizontal center is flex `align-items: center` on `.poster` only.
+Column size is one pair: `--sheet: clamp(20rem, 42vw, 60rem)` then `width: var(--sheet)` and `font-size: calc(var(--sheet) / 20)` so type/icons/buttons grow with the card. No `min()`, no `max-width`, no `@media` font/width lock. Horizontal center is flex `align-items: center` on `.poster` only.
 
 Do not restore a share/DM stamp. Discord stays `https://discord.com/` until Melani sends a real invite.
