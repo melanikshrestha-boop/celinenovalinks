@@ -3,12 +3,6 @@ import { YoutubeLatest } from "@/components/YoutubeLatest";
 export default function HomePage() {
   return (
     <div className="poster">
-      <div className="wash" aria-hidden="true">
-        <div className="bg">
-          <img src="/assets/fendi.jpg" alt="" />
-          <img src="/assets/spring.jpg" alt="" />
-        </div>
-      </div>
       <div className="stage">
         <div className="bg" aria-hidden="true">
           <img src="/assets/fendi.jpg" alt="" />

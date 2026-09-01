@@ -35,11 +35,6 @@ body {
   background: #050505;
 }
 
-/* Desktop only: faded still behind the phone column (Linktree's green field). */
-.wash {
-  display: none;
-}
-
 .stage {
   position: relative;
   z-index: 2;
@@ -141,37 +136,16 @@ body {
 @media (min-width: 640px) {
   .poster {
     justify-content: flex-start;
+    background: var(--paper);
   }
 
-  .wash {
-    display: block;
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .wash .bg img {
-    filter: blur(6px) saturate(0.95);
-    transform: scale(1.04);
-    opacity: 0.9;
-  }
-
-  .wash::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(8, 6, 4, 0.28);
-  }
-
-  /* 580px Linktree width, flush to the chrome — no gap above the case. */
+  /* Cream paper field (Linktree’s green). Photo lives only in the phone column. */
   .stage {
     justify-content: center;
     width: min(36.25rem, calc(100% - 2rem));
     height: 100svh;
     border-radius: 0;
-    box-shadow: 0 0 80px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 0 48px rgba(20, 18, 16, 0.12);
   }
 
   .sheet {
