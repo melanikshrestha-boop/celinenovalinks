@@ -1,5 +1,6 @@
 :root {
   --paper: #f5f2eb;
+  --field: #d4cbb8;
   --ink: #141210;
 }
 
@@ -136,7 +137,7 @@ body {
 @media (min-width: 640px) {
   .poster {
     justify-content: flex-start;
-    background: var(--paper);
+    background: var(--field);
   }
 
   /* Cream paper field (Linktree’s green). Photo lives only in the phone column. */
