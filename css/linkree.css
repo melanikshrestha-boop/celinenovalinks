@@ -12,7 +12,6 @@
   --space: 24px;
   --space-tight: 12px;
   --inset: 20px;
-  --button-max: 20rem;
   --icon: 28px;
   --radius: 8px;
   --pad-y: 12px;
@@ -255,9 +254,10 @@ body {
 .buttons {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: var(--space-tight);
-  width: 100%;
-  max-width: var(--button-max);
+  width: max-content;
+  max-width: calc(100% - 2 * var(--inset));
 }
 
 .buttons a {
@@ -277,6 +277,7 @@ body {
   font-weight: var(--weight-body);
   letter-spacing: 0;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .buttons .mark {
@@ -302,19 +303,18 @@ body {
   background: #fff;
 }
 
-/* GitHub + LinkedIn share one row — two boxes, same total width as the others. */
+/* GitHub / LinkedIn / Builds — one compact column, width of the longest label. */
 .buttons-split {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: stretch;
   gap: var(--space-tight);
   width: 100%;
 }
 
 .buttons-split a {
-  flex: 1 1 0;
-  width: auto;
-  min-width: 0;
+  flex: 0 0 auto;
+  width: 100%;
 }
 
 /* latest youtube card — em off .sheet */
