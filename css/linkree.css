@@ -144,7 +144,7 @@ body {
     justify-content: flex-start;
     width: min(36.25rem, calc(100% - 2rem));
     height: 100svh;
-    border-radius: 0;
+    border-radius: 1rem;
     box-shadow: 0 0 48px rgba(20, 18, 16, 0.12);
   }
 
