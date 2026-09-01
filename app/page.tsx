@@ -3,12 +3,19 @@ import { YoutubeLatest } from "@/components/YoutubeLatest";
 export default function HomePage() {
   return (
     <div className="poster">
-      <div className="bg" aria-hidden="true">
-        <img src="/assets/fendi.jpg" alt="" />
-        <img src="/assets/spring.jpg" alt="" />
+      <div className="wash" aria-hidden="true">
+        <div className="bg">
+          <img src="/assets/fendi.jpg" alt="" />
+          <img src="/assets/spring.jpg" alt="" />
+        </div>
       </div>
-      <div className="veil" aria-hidden="true" />
-      <div className="sheet">
+      <div className="stage">
+        <div className="bg" aria-hidden="true">
+          <img src="/assets/fendi.jpg" alt="" />
+          <img src="/assets/spring.jpg" alt="" />
+        </div>
+        <div className="veil" aria-hidden="true" />
+        <div className="sheet">
         <header className="head">
           <a className="identity" href="https://melanilaurents.com/" aria-label="Celine Nova">
             <img src="/assets/eren.png" alt="" width={256} height={256} />
@@ -73,6 +80,7 @@ export default function HomePage() {
             Builds &amp; Designs
           </a>
         </nav>
+        </div>
       </div>
     </div>
   );
