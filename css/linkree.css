@@ -149,20 +149,21 @@ body {
   }
 
   .wash .bg img {
-    filter: blur(36px) saturate(0.9);
-    transform: scale(1.18);
-    opacity: 0.72;
+    filter: blur(6px) saturate(0.95);
+    transform: scale(1.04);
+    opacity: 0.9;
   }
 
   .wash::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(8, 6, 4, 0.22);
+    background: rgba(8, 6, 4, 0.28);
   }
 
   /* Match Linktree desktop card: 580px × (100svh - 2.5rem), 24px corners. */
   .stage {
+    justify-content: center;
     width: min(36.25rem, calc(100% - 2rem));
     height: calc(100svh - 2.5rem);
     border-radius: 1.5rem;
@@ -173,6 +174,8 @@ body {
     width: calc(100% - 2.5rem);
     max-width: none;
     margin-inline: auto;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     font-size: 1rem;
   }
 }
