@@ -139,6 +139,10 @@ body {
 }
 
 @media (min-width: 640px) {
+  .poster {
+    justify-content: flex-start;
+  }
+
   .wash {
     display: block;
     position: absolute;
@@ -161,13 +165,13 @@ body {
     background: rgba(8, 6, 4, 0.28);
   }
 
-  /* Match Linktree desktop card: 580px × (100svh - 2.5rem), 24px corners. */
+  /* 580px Linktree width, flush to the chrome — no gap above the case. */
   .stage {
     justify-content: center;
     width: min(36.25rem, calc(100% - 2rem));
-    height: calc(100svh - 2.5rem);
-    border-radius: 1.5rem;
-    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
+    height: 100svh;
+    border-radius: 0;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.45);
   }
 
   .sheet {
