@@ -1,6 +1,7 @@
 :root {
   --paper: #f5f2eb;
-  --field: #d4cbb8;
+  --field: #e8e1d2;
+  --field-wash: rgba(245, 242, 235, 0.42);
   --ink: #141210;
   --font: Syne, system-ui, sans-serif;
   --type-header: 20px;
@@ -126,10 +127,10 @@ body {
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.42) 0%,
-    rgba(0, 0, 0, 0.18) 28%,
-    rgba(0, 0, 0, 0.18) 72%,
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(0, 0, 0, 0.22) 0%,
+    rgba(0, 0, 0, 0.06) 28%,
+    rgba(0, 0, 0, 0.06) 72%,
+    rgba(0, 0, 0, 0.2) 100%
   );
 }
 
@@ -155,7 +156,9 @@ body {
 @media (min-width: 640px) {
   .poster {
     justify-content: flex-start;
-    background: var(--field);
+    background:
+      linear-gradient(var(--field-wash), var(--field-wash)),
+      var(--field);
   }
 
   /* Cream paper field (Linktree’s green). Photo lives only in the phone column. */

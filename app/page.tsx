@@ -55,6 +55,12 @@ export default function HomePage() {
             <span className="mark"><img src="/assets/eren.png" alt="" /></span>
             Celine Nova.
           </a>
+          <a href="https://melanilaurents.com/photography">
+            <span className="mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 5h-3.2l-1.2-1.8A2 2 0 0014 2.5H10a2 2 0 00-1.6.7L7.2 5H4a2 2 0 00-2 2v11a2 2 0 002 2h16a2 2 0 002-2V7a2 2 0 00-2-2zm-8 12.2A4.2 4.2 0 1116.2 13 4.2 4.2 0 0112 17.2zM12 10a3 3 0 103 3 3 3 0 00-3-3z"/></svg>
+            </span>
+            Art
+          </a>
           <div className="buttons-split">
             <a href="https://github.com/melanikshrestha-boop" target="_blank" rel="noopener noreferrer">
               <span className="mark" aria-hidden="true">
