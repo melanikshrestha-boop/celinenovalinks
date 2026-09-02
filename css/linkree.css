@@ -249,10 +249,9 @@ body {
   width: var(--icon);
   height: var(--icon);
   color: #fff;
-  filter: drop-shadow(0 0 0.35rem rgba(0, 0, 0, 0.55));
   opacity: 0;
   animation: link-fade 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  transition: transform 0.22s ease, filter 0.22s ease;
+  transition: transform 0.22s ease;
 }
 
 .icons a:nth-child(1) {
@@ -274,7 +273,6 @@ body {
 .icons a:hover,
 .icons a:focus-visible {
   color: #fff;
-  filter: drop-shadow(0 0 0.45rem rgba(0, 0, 0, 0.7));
   transform: translateY(-4px) scale(1.08);
 }
 
