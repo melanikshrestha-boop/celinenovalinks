@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { ButtonTune } from "@/components/ButtonTune";
 import { YoutubeLatest } from "@/components/YoutubeLatest";
 
@@ -13,7 +14,13 @@ export default function HomePage() {
         <div className="sheet">
         <header className="head">
           <a className="identity" href="https://melanilaurents.com/" aria-label="Celine Nova">
-            <img src="/assets/eren.png" alt="" width={256} height={256} />
+            <img
+              src="/assets/eren.png"
+              alt=""
+              width={28}
+              height={28}
+              style={{ width: 28, height: 28 }}
+            />
             <span>CELINE NOVA.</span>
           </a>
           <div className="stack">
@@ -33,7 +40,9 @@ export default function HomePage() {
               </a>
             </nav>
           </div>
-          <YoutubeLatest />
+          <Suspense fallback={null}>
+            <YoutubeLatest />
+          </Suspense>
           <div className="stack">
             <p className="socials-label">contact me</p>
             <nav className="icons" aria-label="Contact">
@@ -52,7 +61,9 @@ export default function HomePage() {
         <ButtonTune />
         <nav className="buttons" aria-label="Links">
           <a href="https://melanilaurents.com/">
-            <span className="mark"><img src="/assets/eren.png" alt="" /></span>
+            <span className="mark">
+              <img src="/assets/eren.png" alt="" width={18} height={18} />
+            </span>
             Celine Nova.
           </a>
           <div className="buttons-split">

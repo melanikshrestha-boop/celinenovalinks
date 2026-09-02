@@ -16,6 +16,19 @@ export function youtubeFeedUrl(channelId = YOUTUBE_CHANNEL_ID): string {
   return `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
 }
 
+export async function getLatestYoutube(): Promise<YoutubePayload> {
+  try {
+    const res = await fetch(youtubeFeedUrl(), {
+      headers: { "user-agent": "celinenovalinks/1.0" },
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return EMPTY;
+    return parseLatestEntry(await res.text());
+  } catch {
+    return EMPTY;
+  }
+}
+
 function decodeEntities(value: string): string {
   return value
     .replace(/&amp;/g, "&")

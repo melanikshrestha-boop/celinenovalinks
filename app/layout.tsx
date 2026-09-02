@@ -31,6 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `.identity img{width:28px;height:28px;object-fit:cover;border-radius:0}.bg,.bg img{position:absolute;inset:0}.bg img{width:100%;height:100%;object-fit:cover;display:block}`,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
