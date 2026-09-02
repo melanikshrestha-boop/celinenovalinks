@@ -250,12 +250,32 @@ body {
   height: var(--icon);
   color: #fff;
   filter: drop-shadow(0 0 0.35rem rgba(0, 0, 0, 0.55));
+  opacity: 0;
+  animation: link-fade 0.55s ease forwards;
+  transition: transform 0.22s ease, filter 0.22s ease;
+}
+
+.icons a:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.icons a:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.icons a:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.icons a:nth-child(4) {
+  animation-delay: 0.32s;
 }
 
 .icons a:hover,
 .icons a:focus-visible {
   color: #fff;
   filter: drop-shadow(0 0 0.45rem rgba(0, 0, 0, 0.7));
+  transform: translateY(-4px) scale(1.08);
 }
 
 .icons svg {
@@ -275,6 +295,7 @@ body {
 }
 
 .buttons a {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,6 +304,7 @@ body {
   min-height: 0;
   padding: var(--pad-y) var(--pad-x);
   border-radius: var(--radius);
+  overflow: hidden;
   background: var(--paper);
   color: var(--ink);
   text-decoration: none;
@@ -292,6 +314,50 @@ body {
   letter-spacing: 0;
   line-height: 1;
   white-space: nowrap;
+  opacity: 0;
+  animation: link-fade 0.55s ease forwards;
+}
+
+/* Specular band. Skew + overflow clip is the left-to-right shine. */
+.buttons a::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: 0;
+  width: 42%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 28%,
+    rgba(255, 255, 255, 0.92) 50%,
+    rgba(255, 255, 255, 0.15) 72%,
+    transparent 100%
+  );
+  box-shadow: 0 0 18px 4px rgba(255, 255, 255, 0.35);
+  transform: translateX(-160%) skewX(-16deg);
+  pointer-events: none;
+}
+
+.buttons a:hover::after,
+.buttons a:focus-visible::after {
+  animation: pill-shine 0.85s ease;
+}
+
+.buttons > a:first-of-type {
+  animation-delay: 0.4s;
+}
+
+.buttons-split a:nth-child(1) {
+  animation-delay: 0.48s;
+}
+
+.buttons-split a:nth-child(2) {
+  animation-delay: 0.56s;
+}
+
+.buttons > a:last-of-type {
+  animation-delay: 0.64s;
 }
 
 .buttons .mark {
@@ -314,7 +380,7 @@ body {
 
 .buttons a:hover,
 .buttons a:focus-visible {
-  background: #fff;
+  background: #fbf8f2;
 }
 
 /* GitHub / LinkedIn / Builds — one compact column, width of the longest label. */
@@ -373,6 +439,7 @@ body {
 
 /* latest youtube card — em off .sheet */
 .yt-latest {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -382,6 +449,33 @@ body {
   color: var(--ink);
   background: var(--paper);
   border-radius: var(--radius);
+  opacity: 0;
+  animation: link-fade 0.55s ease 0.34s forwards;
+}
+
+.yt-latest::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: 0;
+  z-index: 2;
+  width: 38%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 28%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(255, 255, 255, 0.12) 72%,
+    transparent 100%
+  );
+  transform: translateX(-160%) skewX(-16deg);
+  pointer-events: none;
+}
+
+.yt-latest:hover::after,
+.yt-latest:focus-visible::after {
+  animation: pill-shine 0.85s ease;
 }
 
 .yt-latest:hover,
@@ -502,9 +596,45 @@ body {
   }
 }
 
+@keyframes link-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pill-shine {
+  from {
+    transform: translateX(-160%) skewX(-16deg);
+  }
+  to {
+    transform: translateX(320%) skewX(-16deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .yt-shimmer {
+  .yt-shimmer,
+  .icons a,
+  .buttons a,
+  .yt-latest,
+  .buttons a:hover::after,
+  .buttons a:focus-visible::after,
+  .yt-latest:hover::after,
+  .yt-latest:focus-visible::after {
     animation: none;
+  }
+
+  .icons a,
+  .buttons a,
+  .yt-latest {
+    opacity: 1;
+  }
+
+  .icons a:hover,
+  .icons a:focus-visible {
+    transform: none;
   }
 }
 
