@@ -34,8 +34,8 @@
           "value": "strict-origin-when-cross-origin"
         },
         {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'self' https://melanilaurents.com https://www.melanilaurents.com https://celinenova.com https://www.celinenova.com https://celinenova.vercel.app http://127.0.0.1:3001"
         },
         {
           "key": "Permissions-Policy",
