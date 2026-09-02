@@ -233,6 +233,8 @@ body {
   letter-spacing: var(--track-label);
   line-height: 1;
   text-align: center;
+  opacity: 0;
+  animation: link-fade 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
 }
 
 .icons {
@@ -250,24 +252,24 @@ body {
   height: var(--icon);
   color: #fff;
   opacity: 0;
-  animation: link-fade 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: link-fade 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   transition: transform 0.22s ease;
 }
 
 .icons a:nth-child(1) {
-  animation-delay: 0.12s;
+  animation-delay: 0.2s;
 }
 
 .icons a:nth-child(2) {
-  animation-delay: 0.24s;
+  animation-delay: 0.42s;
 }
 
 .icons a:nth-child(3) {
-  animation-delay: 0.36s;
+  animation-delay: 0.64s;
 }
 
 .icons a:nth-child(4) {
-  animation-delay: 0.48s;
+  animation-delay: 0.86s;
 }
 
 .icons a:hover,
@@ -313,7 +315,7 @@ body {
   line-height: 1;
   white-space: nowrap;
   opacity: 0;
-  animation: link-fade 0.55s ease forwards;
+  animation: link-fade 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Specular band. Skew + overflow clip is the left-to-right shine. */
@@ -343,19 +345,19 @@ body {
 }
 
 .buttons > a:first-of-type {
-  animation-delay: 0.4s;
+  animation-delay: 1.05s;
 }
 
 .buttons-split a:nth-child(1) {
-  animation-delay: 0.48s;
+  animation-delay: 1.28s;
 }
 
 .buttons-split a:nth-child(2) {
-  animation-delay: 0.56s;
+  animation-delay: 1.5s;
 }
 
 .buttons > a:last-of-type {
-  animation-delay: 0.64s;
+  animation-delay: 1.72s;
 }
 
 .buttons .mark {
@@ -448,7 +450,7 @@ body {
   background: var(--paper);
   border-radius: var(--radius);
   opacity: 0;
-  animation: link-fade 0.55s ease 0.34s forwards;
+  animation: link-fade 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
 }
 
 .yt-latest::after {
@@ -616,6 +618,7 @@ body {
   .yt-shimmer,
   .icons a,
   .buttons a,
+  .socials-label,
   .yt-latest,
   .buttons a:hover::after,
   .buttons a:focus-visible::after,
@@ -626,6 +629,7 @@ body {
 
   .icons a,
   .buttons a,
+  .socials-label,
   .yt-latest {
     opacity: 1;
   }
