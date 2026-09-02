@@ -8,18 +8,18 @@ export const metadata: Metadata = {
     // Square Eren only. Never a C. Never a gold ring. Path changes when Chrome caches a C.
     // Do not add app/favicon.ico — Next hashes it and Chrome prefers the C.
     icon: [
-      { url: "/assets/eren-stay10.png?v=stay10", type: "image/png", sizes: "256x256" },
-      { url: "/assets/eren-stay10.png?v=stay10", type: "image/png", sizes: "48x48" },
-      { url: "/assets/eren-stay10.png?v=stay10", type: "image/png", sizes: "32x32" },
+      { url: "/assets/eren-all.png?v=all1", type: "image/png", sizes: "32x32" },
+      { url: "/assets/eren-all.png?v=all1", type: "image/png", sizes: "48x48" },
+      { url: "/assets/eren-all.png?v=all1", type: "image/png", sizes: "256x256" },
     ],
     apple: [
       {
-        url: "/assets/eren-stay10.png?v=stay10",
+        url: "/assets/eren-all.png?v=all1",
         sizes: "180x180",
         type: "image/png",
       },
     ],
-    shortcut: [{ url: "/assets/eren-stay10.png?v=stay10", type: "image/png" }],
+    shortcut: [{ url: "/assets/eren-all.png?v=all1", type: "image/png" }],
   },
 };
 
