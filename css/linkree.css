@@ -120,6 +120,47 @@ body {
   }
 }
 
+.usc-hud {
+  position: absolute;
+  right: max(var(--inset), env(safe-area-inset-right, 0px));
+  bottom: max(3.4rem, calc(env(safe-area-inset-bottom, 0px) + 1.2rem));
+  left: max(var(--inset), env(safe-area-inset-left, 0px));
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+  pointer-events: none;
+  opacity: 0;
+  animation: link-fade 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.usc-hud__mark {
+  flex: 0 0 auto;
+  width: 4.1rem;
+  height: 1.45rem;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.55));
+}
+
+.usc-hud__mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.usc-hud p {
+  flex: 1 1 auto;
+  margin: 0;
+  color: #fff;
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: var(--weight-body);
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-align: right;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
 .veil {
   position: absolute;
   inset: 0;
@@ -620,6 +661,7 @@ body {
   .buttons a,
   .socials-label,
   .yt-latest,
+  .usc-hud,
   .buttons a:hover::after,
   .buttons a:focus-visible::after,
   .yt-latest:hover::after,
@@ -630,7 +672,8 @@ body {
   .icons a,
   .buttons a,
   .socials-label,
-  .yt-latest {
+  .yt-latest,
+  .usc-hud {
     opacity: 1;
   }
 

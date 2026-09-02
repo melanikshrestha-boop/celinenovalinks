@@ -2,6 +2,28 @@ import { Suspense } from "react";
 import { ButtonTune } from "@/components/ButtonTune";
 import { YoutubeLatest } from "@/components/YoutubeLatest";
 
+function UscMark() {
+  return (
+    <svg viewBox="0 0 108 36" aria-hidden="true">
+      <text
+        x="54"
+        y="30"
+        textAnchor="middle"
+        fill="#990000"
+        stroke="#FFCC00"
+        strokeWidth="1.1"
+        paintOrder="stroke fill"
+        fontFamily="Georgia, 'Times New Roman', Times, serif"
+        fontSize="30"
+        fontWeight="700"
+        letterSpacing="1.2"
+      >
+        USC
+      </text>
+    </svg>
+  );
+}
+
 export default function HomePage() {
   return (
     <div className="poster">
@@ -11,6 +33,15 @@ export default function HomePage() {
           <img src="/assets/spring.jpg" alt="" />
         </div>
         <div className="veil" aria-hidden="true" />
+        <div className="usc-hud">
+          <span className="usc-hud__mark" aria-hidden="true">
+            <UscMark />
+          </span>
+          <p>currently studying CS + business at USC</p>
+          <span className="usc-hud__mark" aria-hidden="true">
+            <UscMark />
+          </span>
+        </div>
         <div className="sheet">
         <header className="head">
           <a className="identity" href="https://melanilaurents.com/" aria-label="Celine Nova">
