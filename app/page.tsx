@@ -37,10 +37,18 @@ export default function HomePage() {
           <span className="usc-hud__mark" aria-hidden="true">
             <UscMark />
           </span>
-          <p>currently studying CS + business at USC</p>
-          <span className="usc-hud__mark" aria-hidden="true">
-            <UscMark />
-          </span>
+          <p>
+            {["currently", "studying", "CS", "+", "business", "at", "USC"].map(
+              (word, i) => (
+                <span
+                  key={`${word}-${i}`}
+                  style={{ animationDelay: `${0.14 + i * 0.07}s` }}
+                >
+                  {word}
+                </span>
+              ),
+            )}
+          </p>
         </div>
         <div className="sheet">
         <header className="head">

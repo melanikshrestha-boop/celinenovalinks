@@ -123,23 +123,23 @@ body {
 .usc-hud {
   position: absolute;
   right: max(var(--inset), env(safe-area-inset-right, 0px));
-  bottom: max(3.4rem, calc(env(safe-area-inset-bottom, 0px) + 1.2rem));
+  bottom: max(8px, env(safe-area-inset-bottom, 0px));
   left: max(var(--inset), env(safe-area-inset-left, 0px));
   z-index: 3;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 0.75rem;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0.55rem;
   pointer-events: none;
-  opacity: 0;
-  animation: link-fade 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
 }
 
 .usc-hud__mark {
   flex: 0 0 auto;
   width: 4.1rem;
   height: 1.45rem;
+  opacity: 0;
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.55));
+  animation: usc-whip 0.95s cubic-bezier(0.22, 1.45, 0.36, 1) 0.06s forwards;
 }
 
 .usc-hud__mark svg {
@@ -149,7 +149,10 @@ body {
 }
 
 .usc-hud p {
-  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.38em;
   margin: 0;
   color: #fff;
   font-family: var(--font);
@@ -157,8 +160,34 @@ body {
   font-weight: var(--weight-body);
   letter-spacing: 0.04em;
   line-height: 1.25;
-  text-align: right;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.usc-hud p span {
+  display: inline-block;
+  opacity: 0;
+  animation: usc-whip 0.95s cubic-bezier(0.22, 1.45, 0.36, 1) forwards;
+}
+
+@keyframes usc-whip {
+  0% {
+    opacity: 0;
+    transform: translate3d(-16px, 12px, 0);
+  }
+  38% {
+    opacity: 1;
+    transform: translate3d(0, -11px, 0);
+  }
+  62% {
+    transform: translate3d(0, 5px, 0);
+  }
+  80% {
+    transform: translate3d(0, -2.5px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .veil {
@@ -662,6 +691,8 @@ body {
   .socials-label,
   .yt-latest,
   .usc-hud,
+  .usc-hud__mark,
+  .usc-hud p span,
   .buttons a:hover::after,
   .buttons a:focus-visible::after,
   .yt-latest:hover::after,
@@ -673,7 +704,9 @@ body {
   .buttons a,
   .socials-label,
   .yt-latest,
-  .usc-hud {
+  .usc-hud,
+  .usc-hud__mark,
+  .usc-hud p span {
     opacity: 1;
   }
 
