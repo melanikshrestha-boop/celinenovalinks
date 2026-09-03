@@ -1,6 +1,8 @@
 # celinenovalinks
 
-Live: `https://celinenovalinks.vercel.app/`
+Canonical page is now `https://melanilaurents.com/links` (hidden route on the Celine Nova site — not in the header). This Vercel app 301s there so old bios do not show `*.vercel.app`.
+
+Live (legacy host): `https://celinenovalinks.vercel.app/` → melanilaurents.com/links
 
 `npx vercel --prod` aliases `my-linkree.vercel.app` only. After every prod deploy, also run:
 

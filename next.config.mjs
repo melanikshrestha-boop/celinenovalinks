@@ -9,6 +9,15 @@ const nextConfig = {
   turbopack: { root },
   // Chrome hard-requests /favicon.ico. Serve square Eren PNG there too.
   // Do not add app/favicon.ico — Next hashes it and Chrome caches a C.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        destination: "https://melanilaurents.com/links",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return {
       beforeFiles: [
