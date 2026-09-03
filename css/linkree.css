@@ -165,40 +165,41 @@ body {
 
 @media (min-width: 640px) {
   .poster {
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background: #2c261c;
   }
 
-  /* Same stills as the phone, blurred — outer field matches the card palette. */
+  /* Same stills as the phone, light blur — field should still read as the photo. */
   .field {
     display: block;
     overflow: hidden;
   }
 
   .field img {
-    transform: scale(1.22);
-    filter: blur(52px) saturate(1.18) brightness(0.92);
+    transform: scale(1.06);
+    filter: blur(14px) saturate(1.06) brightness(1);
   }
 
   .field::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(28, 22, 16, 0.14);
+    background: rgba(28, 22, 16, 0.05);
   }
 
-  /* Linktree phone card: 36.25rem × almost-full viewport, 1.5rem corners. */
+  /* Gap at the top only. Card runs to the bottom edge. */
   .stage {
     justify-content: flex-start;
     align-items: center;
     width: min(36.25rem, calc(100% - 2.5rem));
-    height: calc(100svh - 2.5rem);
+    height: calc(100svh - 1.25rem);
     margin: 0;
-    border-radius: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
     box-shadow:
       0 0 0 1px rgba(255, 255, 255, 0.1),
-      0 18px 60px rgba(0, 0, 0, 0.34);
+      -12px 0 40px rgba(0, 0, 0, 0.22),
+      12px 0 40px rgba(0, 0, 0, 0.22);
   }
 
   .sheet {

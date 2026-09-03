@@ -8,7 +8,7 @@ Live: `https://celinenovalinks.vercel.app/`
 npx vercel alias set <deployment-url> celinenovalinks.vercel.app
 ```
 
-Desktop is Linktree’s phone-on-field. Stage is `36.25rem` × `calc(100svh - 2.5rem)` (580×942 on a 1512×982 laptop — same as Linktree’s card) with `1.5rem` corners. Extra viewport is a blurred copy of the same stills so the field matches the card — never cream paper beside the photo. Phone is full-bleed. Do not grow the column with `vw`.
+Desktop is Linktree’s phone-on-field. Stage is `36.25rem` wide, `1.25rem` gap at the **top only**, flush to the bottom (`height: calc(100svh - 1.25rem)`, top corners `1.5rem`, bottom square). Extra viewport is a light-blur copy of the same stills — the photo must still be readable, not a mud wash. Never cream paper beside the photo. Phone is full-bleed. Do not grow the column with `vw`.
 
 Do not restore a share/DM stamp. Discord stays `https://discord.com/` until Melani sends a real invite.
 
